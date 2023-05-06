@@ -1,0 +1,14 @@
+GET http://localhost:5000/subscribers
+
+###
+
+GET http://localhost:5000/subscribers/66
+
+###
+
+POST http://localhost:5000/subscribers
+Content-Type: application/json
+{
+    "name" : "lithi",
+    "subscribeToChannel" : "Web Dev Simplified"
+}
