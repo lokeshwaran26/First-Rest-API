@@ -2,13 +2,17 @@ GET http://localhost:5000/subscribers
 
 ###
 
-GET http://localhost:5000/subscribers/66
+GET http://localhost:5000/subscribers/645666049899fcd1e4f6945a
 
 ###
 
 POST http://localhost:5000/subscribers
 Content-Type: application/json
 {
-    "name" : "lithi",
-    "subscribeToChannel" : "Web Dev Simplified"
+    "name" : "Bat Man",
+    "subscribeToChannel" : "loki.webdev"
 }
+
+###
+
+DELETE  http://localhost:5000/subscribers/645666049899fcd1e4f6945a
