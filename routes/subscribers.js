@@ -1,6 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const Subscriber = require('../models/subscriber');
+const subscriber = require('../models/subscriber');
 
 
 //Getting all
@@ -39,7 +40,21 @@ router.post('/', async (req, res)=>{
 
 
 //Updating one
-router.patch('/:id', (req, res)=>{
+router.patch('/:id', getSubscriber, async (req, res)=>{
+
+    if(req.body.name == !null){
+        res.subscriber.name = req.body.name
+    }
+    if(req.body.subscribeToChannel == !null){
+        res.subscriber.subscribeToChannel = req.body.subscribeToChannel
+    }
+
+    try {
+        const updateSubscriber = await res.subscriber.save()
+        res.status(201).json(updateSubscriber)
+    } catch (err) {
+        res.status(400).json({ message : err.message })
+    }
 
 })
 

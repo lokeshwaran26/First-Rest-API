@@ -9,7 +9,7 @@ GET http://localhost:5000/subscribers/645666049899fcd1e4f6945a
 POST http://localhost:5000/subscribers
 Content-Type: application/json
 {
-    "name" : "Bat Man",
+    "name" : "Iron Man",
     "subscribeToChannel" : "loki.webdev"
 }
 
